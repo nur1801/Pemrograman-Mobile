@@ -42,12 +42,39 @@ void main(List<String> arguments) {
   //   print(index);
   // }
 
-  for (int index = 1; index < 30; index++) {
-  if (index == 21) {
-      break;
-    } else if (index > 1 && index < 7) {
-      continue;
+  // for (int index = 1; index < 30; index++) {
+  // if (index == 21) {
+  //     break;
+  //   } else if (index > 1 && index < 7) {
+  //     continue;
+  //   }
+  //   print(index);
+  // }
+  // ---------------------------------------
+
+  // TUGAS PRATIKUM
+  String namaLengkap = "Nurhidayah";
+  String NIM = "2241760044";
+
+  for (int i = 0; i <= 201; i++) {
+      if (isPrima(i)) {
+        print("Bilangan prima: $i");
+        print("Nama: $namaLengkap");
+        print("NIM: $NIM");
+        print("");
+      }
     }
-    print(index);
   }
+  bool isPrima(int number) {
+    if (number <= 1) {
+      return false;
+    }
+
+    for (int i = 2; i * i <= number; i++) {
+      if (number % i == 0) {
+        return false;
+      }
+    }
+
+    return true;
 }
